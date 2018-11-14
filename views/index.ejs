@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="./javascripts/stap.js"></script>
+	<style>
+			body, html {
+		    height: 100%;
+		    margin: 0;
+		}
+
+		.bg {
+		    		  
+		background-image: url("./images/background.jpg"); 
+		width: 100%
+		height: 100%; 
+		background-position: center;
+        background-position: justify;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 5px 5px;
+		   }
+		    
+		/************* css for login starts here***********/
+				.card-container.card {
+				position: relative;
+				margin-top:30px;
+				margin-left: 0px;
+			    max-width: 400px;
+			    max-height: 450px;
+			    padding: 30px 30px;
+
+			}
+
+			.btn {
+			    font-weight: 700;
+			    height: 36px;
+			    -moz-user-select: none;
+			    -webkit-user-select: none;
+			    user-select: none;
+			    cursor: default;
+			}
+
+			/*	 * Card component			 */
+			.card {
+			    background-color: transparent;
+			    /* just in case there no content*/
+			   /* padding: 10px 25px 30px;*/
+			    margin: 0 auto 25px;
+			    margin-top: 50px;
+			    margin-left: 10px;
+			    font-size: 20px;
+			    font-family: Times New Roman;
+			    /* shadows and rounded borders */
+			    -moz-border-radius: 2px;
+			    -webkit-border-radius: 2px;
+			    border-radius: 2px;
+			    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+			    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+			    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);*/
+
+			}
+
+			.profile-img-card {
+			width: 96px;
+			height: 96px;
+			margin: 0 auto 10px;
+			display: block;
+			-moz-border-radius: 50%;
+			-webkit-border-radius: 50%;
+			border-radius: 50%;
+			}
+
+			/*
+			 * Form styles
+			 */
+			.profile-name-card {
+			    font-size: 16px;
+			    font-weight: bold;
+			    text-align: center;
+			    margin: 10px 0 0;
+			    min-height: 1em;
+			}
+
+			.form-signin #inputEmail,
+			.form-signin #inputPassword {
+			    direction: ltr;
+			    height: 44px;
+			    font-size: 16px;
+			}
+
+			.form-signin input[type=email],
+			.form-signin input[type=password],
+			.form-signin input[type=text],
+			.form-signin button {
+			    width: 100%;
+			    display: block;
+			    margin-bottom: 10px;
+			    z-index: 1;
+			    position: relative;
+			    -moz-box-sizing: border-box;
+			    -webkit-box-sizing: border-box;
+			    box-sizing: border-box;
+			}
+
+			.form-signin .form-control:focus {
+			    border-color: rgb(104, 145, 162);
+			    outline: 0;
+			    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+			    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+			}
+
+			.btn.btn-signin {
+			    /*background-color: #4d90fe; */
+			    background-color: rgb(104, 145, 162);
+			    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+			    padding: 0px;
+			    font-weight: 700;
+			    font-size: 14px;
+			    height: 36px;
+			    -moz-border-radius: 3px;
+			    -webkit-border-radius: 3px;
+			    border-radius: 3px;
+			    border: none;
+			    -o-transition: all 0.218s;
+			    -moz-transition: all 0.218s;
+			    -webkit-transition: all 0.218s;
+			    transition: all 0.218s;
+			}
+
+			.btn.btn-signin:hover,
+			.btn.btn-signin:active,
+			.btn.btn-signin:focus{
+		    background-color: rgb(12, 97, 33);
+			}		
+
+			.container-f{
+				background-color: #263238;
+				 height: 100px; margin-top: -20px;
+				}
+	</style>
+</head>
+
+<body>
+	<div class="bg">
+	  <div class="container">
+      <div class="card card-container">
+        <img id="profile-img" class="profile-img-card" src="./images/logo.jpg" />
+       	 <form class="form-signin" action="post" method="/profile">
+            <label for="name"><b>Username</b></label><br>
+	  		<input type="text" id="inputname"  name="name" style="height:28px" class="form-control" required >
+	   		<label for="password"><b>Password</b></label><br>
+	    	<input type="password" name="password" id="inputPassword" style="height:28px" class="form-control"  required >
+            <div id="remember" class="checkbox">
+            <label>
+            <input type="checkbox" value="remember-me"> Remember me
+            </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit"><i class=" fa fa-heart"></i> SIGN IN </button>
+			<br>
+            <a href="/signup" style="color: black">  Don't have an account? </a>
+   		</form>
+       </div><!-- /card-container -->
+    </div><!-- /container -->
+
+</div>
+<!-- Footer --> 
+<footer class="page-footer font-small special-color-dark pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container-f"><br>
+
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1">
+            <i class="fa fa-facebook"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1">
+            <i class="fa fa-twitter"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-gplus mx-1">
+            <i class="fa fa-google-plus"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1">
+            <i class="fa fa-linkedin"> </i>
+          </a>
+        </li>
+       
+      </ul>
+      <!-- Social buttons -->
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="background-color: #37474F; color: white;" >© 2018 Copyright:
+      <a href="http://wlit.org.np/" style="color: white;"> Wlit.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+<script>
+
+
+</script>
+    
+</body>
+</html>
